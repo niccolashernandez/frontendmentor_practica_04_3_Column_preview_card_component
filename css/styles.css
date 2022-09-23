@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --font-family-body: 'Lexend Deca', sans-serif;
+    --font-family-titles: 'Big Shoulders Display', cursive;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-normal);
+    font-size: 15px;
+
+}
+
+.main-container {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.main-container .article-card {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    justify-content: space-around;
+    font-size: .8em;
+}
+
+.main-container .article-card:nth-child(1) {
+    background-color: var(--Bright-orange);
+    border-radius: 8px 8px 0 0;
+}
+
+.main-container .article-card .article-card__button {
+    background-color: var(--Very-light-gray);
+    padding: 1em;
+    width: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8em;
+    cursor: pointer;
+}
+
+
+.main-container .article-card:nth-child(1) .article-card__button {
+    color: var(--Bright-orange);
+}
+
+.main-container .article-card:nth-child(2) {
+    background-color: var(--Dark-cyan);
+}
+
+.main-container .article-card:nth-child(2) .article-card__button {
+    color: var(--Very-dark-cyan);
+}
+
+.main-container .article-card:nth-child(3) {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 8px 8px;
+}
+
+.main-container .article-card:nth-child(3) .article-card__button {
+    color: var(--Very-dark-cyan);
+}
+
+.main-container .article-card .article-card__button:active {
+    border: solid 1px var(--Very-light-gray);
+    background: transparent;
+    color: var(--Very-light-gray)
+}
+
+
+.main-container .article-card .article-card__icon {
+    width: 5em;
+}
+
+
+.main-container .article-card .article-card__title {
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+    font-family: var(--font-family-titles);
+    font-size: 2.5em;
+}
+
+.main-container .article-card .article-card__description {
+    color: var(--Transparent-white);
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: 0.06em;
+    line-height: 1.5em;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+
+@media(min-width:700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container {
+        max-width: 1000px;
+        flex-direction: row;
+    }
+
+    .main-container .article-card {
+        padding: 4em;
+    }
+
+    .main-container .article-card .article-card__description {
+        padding-bottom: 2em;
+        width: 90%;
+    }
+
+    .main-container .article-card:nth-child(1) {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .main-container .article-card:nth-child(3) {
+        border-radius: 0 8px 8px 0;
+    }
+}
